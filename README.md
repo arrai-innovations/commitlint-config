@@ -13,7 +13,7 @@ To use in a project:
    pre-commit installed at .git/hooks/commit-msg
    ```
 
-1. Create a `.pre-commit-config.yaml` file::
+1. Create a `.pre-commit-config.yaml` file:
 
    ```yaml
    exclude: ".git"
