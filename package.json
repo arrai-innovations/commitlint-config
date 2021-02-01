@@ -1,9 +1,20 @@
 {
-    "name": "@arrai-innovations/commitlint-config",
-    "version": "1.0.0",
-    "description": "Arrai Innovation's shareable configuration for commitlint.",
-    "files": [
-        "index.js"
-    ]
+  "name": "@arrai-innovations/commitlint-config",
+  "version": "1.0.0",
+  "description": "Arrai Innovation's shareable configuration for commitlint.",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arrai-innovations/commitlint-config.git"
+  },
+  "author": "Arrai Innovations Inc.",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/arrai-innovations/commitlint-config/issues"
+  },
+  "homepage": "https://github.com/arrai-innovations/commitlint-config#readme"
 }
-
