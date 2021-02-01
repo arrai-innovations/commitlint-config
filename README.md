@@ -15,24 +15,24 @@ To use in a project:
 
 1. Create a `.pre-commit-config.yaml` file::
 
-```yaml
-exclude: ".git"
-default_stages: [commit]
-fail_fast: true
-
-repos:
-
-```
+   ```yaml
+   exclude: ".git"
+   default_stages: [commit]
+   fail_fast: true
+   
+   repos:
+   
+   ```
 
 1. Add a pre-commit hook to `.pre-commit-config.yaml` for commitlint using [commitlint-pre-commit-hook](https://github.com/alessandrojcm/commitlint-pre-commit-hook) and this repo's configuration:
 
-```yaml
-    - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
-      rev: v4.1.0
-      hooks:
-        - id: commitlint
-          stages: [ commit-msg ]
-          additional_dependencies: [ "@arrai-innovations/commitlint-config" ]
-          always_run: true
-```
+   ```yaml
+       - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
+         rev: v4.1.0
+         hooks:
+           - id: commitlint
+             stages: [ commit-msg ]
+             additional_dependencies: [ "@arrai-innovations/commitlint-config" ]
+             always_run: true
+   ```
 
