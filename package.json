@@ -1,0 +1,9 @@
+{
+    "name": "@arrai-innovations/commitlint-config",
+    "version": "1.0.0",
+    "description": "Arrai Innovation's shareable configuration for commitlint.",
+    "files": [
+        "index.js"
+    ]
+}
+
