@@ -20,18 +20,21 @@ To use in a project:
    fail_fast: true
    
    repos:
-   
-   ```
-
-1. Add a pre-commit hook to `.pre-commit-config.yaml` for commitlint using [commitlint-pre-commit-hook](https://github.com/alessandrojcm/commitlint-pre-commit-hook) and this repo's configuration:
-
-   ```yaml
-   
        - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
          rev: v4.1.0
          hooks:
            - id: commitlint
              stages: [ commit-msg ]
              additional_dependencies: [ "@arrai-innovations/commitlint-config" ]
+   ```
+
+   It contains a pre-commit hook commitlint using [commitlint-pre-commit-hook](https://github.com/alessandrojcm/commitlint-pre-commit-hook) with this repo's configuration as a dependency.
+
+1. Add a `.commitlintrc.json` or other commitlint configuration file (see [Install commitlint](https://commitlint.js.org/#/guides-local-setup?id=install-commitlint)):
+
+   ```json
+   {
+       "extends": ["@arrai-innovations/commitlint-config"]
+   }
    ```
 
