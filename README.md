@@ -2,7 +2,7 @@
 
 Arrai Innovation's shareable configuration for [commitlint](https://commitlint.js.org).
 
-To use in a project:
+## Use with pre-commit
 
 1. Install pre-commit: https://pre-commit.com
 
@@ -37,4 +37,37 @@ To use in a project:
        "extends": ["@arrai-innovations/commitlint-config"]
    }
    ```
+
+## Use with husky
+
+1. Install husky: https://typicode.github.io/husky/
+
+1. Install commitlint/cli: https://www.npmjs.com/package/@commitlint/cli
+
+   ```console
+   $ npm install --save-dev @commitlint/cli
+   ```
+
+1. Create a `.husky/commit-msg` file to run commitlint:
+
+   ```bash
+   #!/usr/bin/env bash
+   npx --no-install commitlint --edit $1
+   ```
+
+1. Install this repo's configuration:
+
+   ```console
+   $ npm install --save-dev @arrai-innovations/commitlint-config
+   ```
+
+1. Add a `.commitlintrc.json` or other commitlint configuration file (see [Install commitlint](https://commitlint.js.org/#/guides-local-setup?id=install-commitlint)):
+
+   ```json
+   {
+       "extends": ["@arrai-innovations/commitlint-config"]
+   }
+   ```
+
+1. Install lint-staged: https://github.com/okonet/lint-staged#installation-and-setup
 
