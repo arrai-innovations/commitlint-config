@@ -2,6 +2,9 @@
 
 Arrai Innovation's shareable configuration for [commitlint](https://commitlint.js.org).
 
+- [Use with pre-commit](#use-with-pre-commit)
+- [Use with Husky](#use-with-husky)
+
 ## Use with pre-commit
 
 1. Install pre-commit: https://pre-commit.com
