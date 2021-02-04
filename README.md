@@ -67,7 +67,7 @@ Arrai Innovation's shareable configuration for [commitlint](https://commitlint.j
 1. Add scripts to `package.json` to install Husky hooks when a user runs `npm install` while developing our package:
 
    ```console
-   $ npm install --save-dev is-cli pinst
+   $ npm install --save-dev is-ci pinst
    ```
 
    ```json
