@@ -59,7 +59,7 @@ Arrai Innovation's shareable configuration for [commitlint](https://commitlint.j
 
    ```bash
    #!/usr/bin/env bash
-   npx --no-install commitlint --edit $1
+   npx --no-install commitlint --edit "$1"
    ```
    
    Husky changed formats in version 5. Version 4 Husky used to have it's hooks configured in `package.json`.
