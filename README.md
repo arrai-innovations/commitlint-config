@@ -16,7 +16,7 @@ Arrai Innovation's shareable configuration for [commitlint](https://commitlint.j
    pre-commit installed at .git/hooks/commit-msg
    ```
 
-1. Create a `.pre-commit-config.yaml` file:
+1. Create a `.pre-commit-config.yaml` file at the root of your repo:
 
    ```yaml
    default_stages: [commit]
@@ -33,7 +33,7 @@ Arrai Innovation's shareable configuration for [commitlint](https://commitlint.j
 
    It contains a pre-commit hook for commitlint using [commitlint-pre-commit-hook](https://github.com/alessandrojcm/commitlint-pre-commit-hook) with this repo's configuration as a dependency.
 
-1. Add a `.commitlintrc.json` or other commitlint configuration file (see [Install commitlint](https://commitlint.js.org/#/guides-local-setup?id=install-commitlint)):
+1. Add a `.commitlintrc.json` or other commitlint configuration file (see [Install commitlint](https://commitlint.js.org/#/guides-local-setup?id=install-commitlint)) to the root of your repo:
 
    ```json
    {
@@ -55,7 +55,7 @@ Arrai Innovation's shareable configuration for [commitlint](https://commitlint.j
    $ npm install --save-dev @commitlint/cli
    ```
 
-1. Create a `.husky/commit-msg` file to run commitlint:
+1. Create a `.husky/commit-msg` file at the root of your repo to run commitlint:
 
    ```bash
    #!/usr/bin/env bash
@@ -91,7 +91,7 @@ Arrai Innovation's shareable configuration for [commitlint](https://commitlint.j
    $ npm install --save-dev @arrai-innovations/commitlint-config
    ```
 
-1. Add a `.commitlintrc.json` or other commitlint configuration file (see [Install commitlint](https://commitlint.js.org/#/guides-local-setup?id=install-commitlint)):
+1. Add a `.commitlintrc.json` or other commitlint configuration file (see [Install commitlint](https://commitlint.js.org/#/guides-local-setup?id=install-commitlint)) to the root of your repo:
 
    ```json
    {
