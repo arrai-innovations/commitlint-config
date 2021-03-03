@@ -2,9 +2,9 @@
 
 This project adheres to [semantic versioning](https://semver.org).
 
-## Unreleased
+## 1.1.0
 
-*TBD*
+*2021-03-03*
 
 ### Added
 
