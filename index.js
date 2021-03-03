@@ -19,6 +19,7 @@ module.exports = {
                 "fix",
                 "perf",
                 "refactor",
+                "remove",
                 "revert",
                 "style",
                 "test",

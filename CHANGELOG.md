@@ -6,6 +6,9 @@ This project adheres to [semantic versioning](https://semver.org).
 
 *TBD*
 
+### Added
+
+* `remove` commit type.
 
 ## 1.0.0
 
