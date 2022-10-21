@@ -4,6 +4,7 @@ module.exports = {
         "footer-leading-blank": [1, "always"],
         "scope-case": [2, "always", "lower-case"],
         "subject-empty": [2, "never"],
+        "subject-exclamation-mark": [0],
         "type-case": [2, "always", "lower-case"],
         "type-empty": [2, "never"],
         "type-enum": [
