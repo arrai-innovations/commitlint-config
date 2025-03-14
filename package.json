@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/arrai-innovations/commitlint-config/issues"
   },
-  "homepage": "https://github.com/arrai-innovations/commitlint-config#readme"
+  "homepage": "https://github.com/arrai-innovations/commitlint-config#readme",
+  "dependencies": {
+    "@commitlint/config-conventional": "^19.8.0"
+  }
 }
