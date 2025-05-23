@@ -20,7 +20,10 @@ module.exports = {
                 "test",
                 "wip"
             ]
-        ]
-    }
+        ],
+        // Raise to error severity
+        'body-leading-blank': [2, 'always'],
+        'footer-leading-blank': [2, 'always'],
+    },
 };
 
