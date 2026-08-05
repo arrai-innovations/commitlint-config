@@ -2,8 +2,15 @@
 
 Arrai Innovation's shareable configuration for [commitlint](https://commitlint.js.org).
 
+- [Requirements](#requirements)
 - [Use with pre-commit](#use-with-pre-commit)
 - [Use with Husky](#use-with-husky)
+
+## Requirements
+
+- Node.js 22.12.0 or newer, the floor set by `@commitlint/config-conventional` 21.
+- commitlint 21 (`@commitlint/cli@^21`). Commitlint 19 and 20 also load this configuration, but both depend on the
+  deprecated `git-raw-commits` package.
 
 ## Use with pre-commit
 
