@@ -5,6 +5,7 @@ Arrai Innovation's shareable configuration for [commitlint](https://commitlint.j
 - [Requirements](#requirements)
 - [Use with pre-commit](#use-with-pre-commit)
 - [Use with Husky](#use-with-husky)
+- [Publishing](#publishing)
 
 ## Requirements
 
@@ -105,4 +106,54 @@ Arrai Innovation's shareable configuration for [commitlint](https://commitlint.j
        "extends": ["@arrai-innovations/commitlint-config"]
    }
    ```
+
+## Publishing
+
+For maintainers. This package is published to the public npm registry by hand; the repository has no CI.
+
+1. Add the release to `CHANGELOG.md`, set the new `version` in `package.json`, and run `npm install` so
+   `package-lock.json` records the same version.
+
+1. Commit, tag, and push. `pnpm publish` checks that the branch is clean and up to date with its remote, so push before
+   publishing:
+
+   ```console
+   $ git tag -a 3.0.0 -m "3.0.0"
+   $ git push origin main
+   $ git push origin refs/tags/3.0.0
+   ```
+
+1. Confirm both the contents and the destination:
+
+   ```console
+   $ pnpm publish --dry-run
+   📦 @arrai-innovations/commitlint-config@3.0.0 → https://registry.npmjs.org/
+   ```
+
+   The registry on that line must read `registry.npmjs.org`. If it reads anything else, stop and see below.
+
+1. Publish:
+
+   ```console
+   $ pnpm publish
+   ```
+
+   Pass `--otp=<code>` if npm asks for a one-time password. `--access public` is unnecessary, since
+   `publishConfig.access` already sets it.
+
+### Why `publishConfig.registry` is in `package.json`
+
+Developer `~/.npmrc` files map the whole `@arrai-innovations` scope to Arrai's internal registry, which is correct for
+installing private packages but wrong for publishing this public one. The `registry` entry under `publishConfig`
+redirects publishing back to the public registry, and it applies only to publishing. Leave it in place. Without it,
+`pnpm publish` targets the internal registry and stops with a `403 Forbidden`.
+
+To override the scope for a single command instead, without editing your `~/.npmrc`:
+
+```console
+$ pnpm publish --@arrai-innovations:registry=https://registry.npmjs.org/
+```
+
+A registry line naming one package, such as `@arrai-innovations/commitlint-config:registry=...`, has no effect. npm and
+pnpm resolve registry mappings per scope only.
 
