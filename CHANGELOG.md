@@ -2,6 +2,19 @@
 
 This project adheres to [semantic versioning](https://semver.org).
 
+## 3.1.0
+
+*2026-09-17*
+
+### Added
+
+* `body-no-indent`, an error-severity rule rejecting a commit body whose every line carries leading whitespace. A body
+  indented as a whole renders as a code block wherever Markdown displays a commit message, including GitHub's commit and
+  pull request views. A list continuation, a wrapped line, or an indented code sample always leaves at least one line
+  flush against the margin, so those stay legal.
+* A `plugins` entry, which carries the rule's implementation. Commitlint merges it through `extends`, so a consumer
+  needs no change beyond the version bump.
+
 ## 3.0.0
 
 *2026-08-05*
