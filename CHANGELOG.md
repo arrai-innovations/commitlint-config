@@ -2,6 +2,19 @@
 
 This project adheres to [semantic versioning](https://semver.org).
 
+## 3.1.0
+
+*2026-09-17*
+
+### Added
+
+* `body-no-indent`, an error-severity rule rejecting a commit body whose every line carries leading whitespace. A body
+  indented as a whole renders as a code block wherever Markdown displays a commit message, including GitHub's commit and
+  pull request views. A list continuation, a wrapped line, or an indented code sample always leaves at least one line
+  flush against the margin, so those stay legal.
+* A `plugins` entry, which carries the rule's implementation. Commitlint merges it through `extends`, so a consumer
+  needs no change beyond the version bump.
+
 ## 3.0.0
 
 *2026-08-05*
@@ -17,6 +30,16 @@ This project adheres to [semantic versioning](https://semver.org).
 
 * No rule changes. The inherited rule set is identical between `@commitlint/config-conventional` 19.8.1 and 21.2.0, so
   the custom commit types and the error-severity blank-line rules behave as they did before.
+
+## 2.1.0
+
+*2025-05-23*
+
+### Changed
+
+* `body-leading-blank` and `footer-leading-blank` report at error severity, rather than the warning severity
+  `@commitlint/config-conventional` gives them. A commit that ran its body or footer straight against the line above it
+  previously passed the hook with a warning.
 
 ## 2.0.0
 
@@ -35,6 +58,19 @@ This project adheres to [semantic versioning](https://semver.org).
 ### Removed
 
 * Explicit commitlint rule definitions that are now inherited from `@commitlint/config-conventional`.
+
+## 1.2.0
+
+*2022-10-21*
+
+Tagged but never released. `package.json` stayed at 1.1.0, so npm carries no 1.2.0, and consumers first received this
+change in 2.0.0.
+
+### Changed
+
+* `subject-exclamation-mark` is disabled, so a `!` between the type and the colon marks a breaking change without the
+  rule reporting the subject that follows it. 2.0.0 dropped the explicit entry along with the rest of the manual rule
+  set, and `@commitlint/config-conventional` defines no `subject-exclamation-mark`, so `feat!:` needs no rule of ours.
 
 ## 1.1.0
 
